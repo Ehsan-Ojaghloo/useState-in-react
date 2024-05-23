@@ -3,17 +3,26 @@ import "./App.css"
 
 function App() {
 
-  const [number , setNumber] = useState(12)
+  const [number , setNumber] = useState(0)
 
   const showNumber = useRef()
-
-  useEffect(()=> {
-    console.log(showNumber)
-  })
-
+  
   function variable() {
     setNumber(number => number + 1)
+
+    // number >= 4 ? showNumber.current.style.color = 'red' : showNumber.current.style.color = 'green';
+
+    if (number >= 4 && number <= 8) {
+    showNumber.current.style.color = 'red'
+    } else {
+    showNumber.current.style.color = 'green'
+    }
   }
+
+  // useEffect(()=> {
+  //   // console.log(showNumber)
+  // })
+
 
   return (
     <div>
