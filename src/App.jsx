@@ -14,7 +14,7 @@ function App() {
 
     number : {number}
 
-    <button onClick={()=> variable()}>Click</button>
+    <button onClick={variable}>Click</button>
 
     </div>
   )
