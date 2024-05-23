@@ -3,21 +3,21 @@ import "./App.css"
 
 function App() {
 
-  const [number , setNumber] = useState(0)
+  const [number , setNumber] = useState(false)
 
   const showNumber = useRef()
   
-  function variable() {
-    setNumber(number => number + 1)
+  // function variable() {
+  //   setNumber(number => number + 1)
 
-    // number >= 4 ? showNumber.current.style.color = 'red' : showNumber.current.style.color = 'green';
+  //   number >= 4 ? showNumber.current.style.color = 'red' : showNumber.current.style.color = 'green';
 
-    if (number >= 4 && number <= 8) {
-    showNumber.current.style.color = 'red'
-    } else {
-    showNumber.current.style.color = 'green'
-    }
-  }
+  //   if (number >= 4 && number <= 8) {
+  //   showNumber.current.style.color = 'red'
+  //   } else {
+  //   showNumber.current.style.color = 'green'
+  //   }
+  // }
 
   // useEffect(()=> {
   //   // console.log(showNumber)
@@ -27,9 +27,9 @@ function App() {
   return (
     <div>
 
-    number : <span ref={showNumber}>{number}</span>
+    <p> You are a {number ? "admin" : "guest"}</p>
 
-    <button onClick={variable}>Click</button>
+    <button onClick={()=> setNumber(!number)}> {number ? "Demote me" : "Promote me"} </button>
 
     </div>
   )
