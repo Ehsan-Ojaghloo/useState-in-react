@@ -5,12 +5,16 @@ function App() {
 
   const [number , setNumber] = useState(12)
 
+  function variable() {
+    setNumber(number => number + 1)
+  }
+
   return (
     <div>
 
     number : {number}
 
-      <button onClick={()=> setNumber(number => number + 1)}>Click</button>
+    <button onClick={()=> variable()}>Click</button>
 
     </div>
   )
